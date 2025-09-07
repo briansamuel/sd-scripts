@@ -1,12 +1,13 @@
 accelerate==0.30.0
 transformers==4.44.0
-diffusers[torch]==0.25.0
+diffusers==0.25.0           # bỏ [torch] để không tự cài torch
 ftfy==6.1.1
 # albumentations==1.3.0
 opencv-python==4.8.1.78
 einops==0.7.0
 pytorch-lightning==1.9.0
-bitsandbytes==0.44.0
+bitsandbytes==0.44.1        # bản GPU ổn định cho 8-bit
+triton==3.0.0               # cần cho bnb 8-bit
 prodigyopt==1.0
 lion-pytorch==0.0.6
 tensorboard
@@ -16,7 +17,8 @@ altair==4.2.2
 easygui==0.98.3
 toml==0.10.2
 voluptuous==0.13.1
-huggingface-hub==0.24.5
+huggingface-hub>=0.25.0
+numpy<2.0                   # tránh xung đột NumPy 2.x
 # for Image utils
 imagesize==1.4.1
 # for BLIP captioning
